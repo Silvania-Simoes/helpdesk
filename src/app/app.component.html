@@ -1,7 +1,7 @@
 <div class="app">
-  
+  <app-formulario textButton="Enviar"  (mudouContatos)="onMudouContatos($event)"></app-formulario>
   <div class="card">
-    <app-card></app-card>
+    <app-card [dados]="dados" ></app-card>
   </div>
 </div>
 

@@ -1,19 +1,22 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+export interface Contact{
+  id?: string; 
+  name?: string;
+  email?: string;
+}
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
+
 export class CardComponent implements OnInit {
 
-  name = "";
-  email = "";
 
-  onMudouContatos(evento: any) {
-    this.name = evento.name;
-    this.email = evento.email;
-   }
+  @Input() dados: Contact = {};
+  
 
   constructor() { }
 
